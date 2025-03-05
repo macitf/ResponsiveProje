@@ -1,0 +1,205 @@
+/* General body styling */
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Header title styling */
+  header h1 {
+    margin: 0;
+  }
+  
+  /* Navigation menu list styling */
+  nav ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Navigation menu links styling */
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for navigation links */
+  nav ul li a:hover {
+    background-color: #444;
+  }
+  
+  /* Main content area styling */
+  main {
+    padding: 20px 0;
+  }
+  
+  /* Quiz container card styling */
+  #quiz-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Timer and score header bar */
+  .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; 
+  }
+  
+  /* Timer display styling */
+  #timer-display {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Score display styling */
+  .score-display {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  
+  /* Welcome screen styling */
+  #start-quiz {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Welcome screen title */
+  #start-quiz h1 {
+    margin-bottom: 10px;
+  }
+  
+  /* Welcome screen instruction text */
+  #start-quiz p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  /* Start quiz button styling */
+  #start-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for start button */
+  #start-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Question box container */
+  #question-box {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  /* Question text styling */
+  #question {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  /* Answer options container */
+  #options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  /* Answer option button styling */
+  #options button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for option buttons */
+  #options button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Selected answer option styling */
+  #options button.selected {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* Next question button styling */
+  #next-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for next button */
+  #next-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Result dialog box styling */
+  #dialog {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  /* Result message text styling */
+  #dialog-message {
+    margin: 0;
+  }
+  
+  /* Footer styling */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Code Quiz Challenge</title>
+  <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+  <!-- This is the header section containing the navigation menu -->
+  <header>
+    <h1>Code Quiz Challenge</h1>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="score.html">Score</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area starts here -->
+  <main>
+    <div class="form-container">
+      <h2>Login</h2>
+      <form id="login-form" action="#" method="post">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <div id="login-message"></div>
+      <p>Don't have an account? <a href="register.html">Register</a></p>
+    </div>
+  </main>
+
+  <!-- Footer section with copyright information -->
+  <footer>
+    <p>&copy; 2025 Code Quiz Challenge</p>
+  </footer>
+</body>
+</html>
