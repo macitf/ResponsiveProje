@@ -1,0 +1,50 @@
+{
+    "multipleChoice": [
+      {
+        "question": "What is the output of the following JavaScript code?\n\nconsole.log(typeof NaN);",
+        "options": ["number", "NaN", "undefined", "object"],
+        "answer": 0
+      },
+      {
+        "question": "What is the output of the following code?\n\nconsole.log(1 + '2');",
+        "options": ["3", "12", "TypeError", "NaN"],
+        "answer": 1
+      },
+      {
+        "question": "What is the output of the following code?\n\nconsole.log(2 * '3');",
+        "options": ["6", "23", "NaN", "undefined"],
+        "answer": 0
+      },
+      {
+        "question": "Which HTML tag is used for the main heading?",
+        "options": ["<h1>", "<p>", "<div>", "<span>"],
+        "answer": 0
+      }
+    ],
+    "coding": [
+      {
+        "question": "Problem: Write a function that sums all elements in an array.\n\nFunction Name: sumArray\nInput: arr = [1, 2, 3, 4, 5]\nExpected Output: 15\n\nExample:\nIf the array has 3 elements and their sum is 6, the function should return 6.\n\nNote: Your function should take an array parameter and return the sum of all its elements.",
+        "functionName": "sumArray",
+        "startingCode": "function sumArray(arr) {\n  // Write your code here\n\n}",
+        "expectedOutput": "15",
+        "testInput": "[1, 2, 3, 4, 5]",
+        "solution": "function sumArray(arr) {\n  return arr.reduce((sum, num) => sum + num, 0);\n}"
+      },
+      {
+        "question": "Problem: Write a function that reverses a string.\n\nFunction Name: reverseString\nInput: str = 'Hello'\nExpected Output: 'olleH'\n\nExample:\nIf the input is a 2-letter word, the letters should swap positions.\n\nNote: Your function should take a string parameter and return its reverse.",
+        "functionName": "reverseString",
+        "startingCode": "function reverseString(str) {\n  // Write your code here\n\n}",
+        "expectedOutput": "olleH",
+        "testInput": "'Hello'",
+        "solution": "function reverseString(str) {\n  return str.split('').reverse().join('');\n}"
+      },
+      {
+        "question": "Problem: Write a function that calculates the factorial of a number.\n\nFunction Name: factorial\nInput: n = 5\nExpected Output: 120\n\nExample:\nIf the input is 3, you should multiply all numbers from 3 down to 1.\n\nNote: Your function should take a number parameter and return its factorial.\nFactorial is the product of all numbers from 1 to n.",
+        "functionName": "factorial",
+        "startingCode": "function factorial(n) {\n  // Write your code here\n\n}",
+        "expectedOutput": "120",
+        "testInput": "5",
+        "solution": "function factorial(n) {\n  return n <= 1 ? 1 : n * factorial(n - 1);\n}"
+      }
+    ]
+}

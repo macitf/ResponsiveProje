@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Code Quiz Challenge</title>
-  <link rel="stylesheet" href="../styles/index.css">
-  <meta http-equiv="refresh" content="0; url=pages/about.html">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+
+  <script src="../scripts/auth.js"></script>
+ 
+  <script>
+   
+    window.onload = function() {
+      window.location.href = "login.html";
+    }
+  </script>
 </head>
 <body>
-  <!-- This is the header section containing the navigation menu -->
   <header>
     <h1>Code Quiz Challenge</h1>
     <nav>
@@ -15,22 +26,18 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
+       
+        <a href="quiz.html" class="quiz-button">Start Quiz</a>
       </ul>
     </nav>
   </header>
 
-  <!-- Main content area starts here -->
   <main>
-    <h2>Welcome to Code Quiz Challenge</h2>
-    <p>This is the home page. Please use the navigation bar to visit other pages.</p>
+    <p>Redirecting...</p>
   </main>
 
-  <!-- Footer section with copyright information -->
   <footer>
     <p>&copy; 2025 Code Quiz Challenge</p>
   </footer>
-
-  <p>If you are not redirected, <a href="pages/about.html">click here</a>.</p>
 </body>
 </html>

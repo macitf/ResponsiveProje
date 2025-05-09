@@ -4,33 +4,35 @@
   <meta charset="UTF-8">
   <title>Register - Code Quiz Challenge</title>
   <link rel="stylesheet" href="../styles/register.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    .error-message {
+      color: red;
+      margin-top: 10px;
+    }
+    
+    .success-message {
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <!-- This is the header section containing the navigation menu -->
   <header>
     <h1>Code Quiz Challenge</h1>
-    <nav>
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="score.html">Score</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- Main content area starts here -->
   <main>
     <div class="form-container">
       <h2>Register</h2>
-      <form id="register-form" action="#" method="post">
+      <form id="register-form">
         <div class="form-group">
           <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required>
+          <input type="text" id="username" required>
         </div>
         <div class="form-group">
           <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required>
+          <input type="password" id="password" required>
         </div>
         <button type="submit">Register</button>
       </form>
@@ -39,9 +41,50 @@
     </div>
   </main>
 
-  <!-- Footer section with copyright information -->
   <footer>
     <p>&copy; 2025 Code Quiz Challenge</p>
   </footer>
+
+  <script>
+    $(document).ready(function(){
+      $("#register-form").on("submit", function(e){
+        e.preventDefault();
+        const username = $("#username").val().trim();
+        const password = $("#password").val().trim();
+
+        console.log("Register attempt:", { username, password });
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        console.log("Current users:", users);
+
+        if (users.some(user => user.username === username)) {
+          $("#register-message")
+            .text("This username is already taken!")
+            .addClass("error-message")
+            .removeClass("success-message");
+          return;
+        }
+
+        users.push({
+          username: username,
+          password: password
+        });
+
+        localStorage.setItem("users", JSON.stringify(users));
+        console.log("Updated users:", JSON.parse(localStorage.getItem("users")));
+
+        $("#register-message")
+          .text("Registration successful! Redirecting to login page...")
+          .removeClass("error-message")
+          .addClass("success-message");
+
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 2000);
+      });
+
+      console.log("Initial users in storage:", JSON.parse(localStorage.getItem("users")));
+    });
+  </script>
 </body>
 </html>
