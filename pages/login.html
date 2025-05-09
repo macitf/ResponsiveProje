@@ -9,17 +9,8 @@
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
  
   <script src="../scripts/theme.js"></script>
-  <style>
-    .error-message {
-      color: red;
-      margin-top: 10px;
-    }
-    
-    .success-message {
-      color: green;
-      margin-top: 10px;
-    }
-  </style>
+  <script src="../scripts/login.js"></script>
+ 
 </head>
 <body>
   <header>
@@ -49,38 +40,6 @@
     <p>&copy; 2025 Code Quiz Challenge</p>
   </footer>
 
-  <script>
-    $(document).ready(function(){
-      $("#login-form").on("submit", function(e){
-        e.preventDefault();
-        const username = $("#username").val().trim();
-        const password = $("#password").val().trim();
-
-       
-        const users = JSON.parse(localStorage.getItem("users")) || [];
-
-        
-        const user = users.find(u => u.username === username && u.password === password);
-
-        if (user) {
-          $("#login-message")
-            .text("Login successful! Redirecting...")
-            .removeClass("error-message")
-            .addClass("success-message");
-
-          localStorage.setItem("currentUser", username);
-          
-          setTimeout(() => {
-            window.location.href = "quiz.html";
-          }, 2000);
-        } else {
-          $("#login-message")
-            .text("Invalid username or password!")
-            .addClass("error-message")
-            .removeClass("success-message");
-        }
-      });
-    });
-  </script>
+ 
 </body>
 </html>

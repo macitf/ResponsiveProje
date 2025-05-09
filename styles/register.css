@@ -150,3 +150,12 @@ footer {
     bottom: 0;
     width: 100%;
 } 
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}

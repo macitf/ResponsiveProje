@@ -25,199 +25,11 @@
   
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   
-  
+  <script src="../scripts/about.js"></script>
+
   <script src="../scripts/theme.js"></script>
+
   
-  <style>
-    
-    .carousel-container {
-      width: 60%;  
-      margin: 30px auto;
-    }
-    
-    .carousel-item {
-      padding: 0 10px;
-    }
-    
-    .carousel-item img {
-      width: 50%;  
-      height: auto;
-      margin: 0 auto;
-      display: block;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    
-    .carousel-item img:hover {
-      transform: scale(1.05);
-    }
-    
-    .slick-prev, .slick-next {
-      font-size: 0;
-      line-height: 0;
-      position: absolute;
-      top: 50%;
-      width: 30px;
-      height: 30px;
-      padding: 0;
-      transform: translate(0, -50%);
-      cursor: pointer;
-      color: #333;
-      border: none;
-      outline: none;
-      background: rgba(255,255,255,0.7);
-      border-radius: 50%;
-      z-index: 1;
-    }
-    
-    .slick-prev {
-      left: -35px;
-    }
-    
-    .slick-next {
-      right: -35px;
-    }
-    
-    .carousel-caption {
-      margin-top: 10px;
-      text-align: center;
-      font-weight: bold;
-    }
-    
-    
-    .tech-card {
-      background: #f9f9f9;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 20px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .tech-title {
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 10px;
-      margin-bottom: 15px;
-      font-size: 18px;
-      color: #333;
-    }
-    
-    
-    .project-info {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 30px;
-    }
-    
-    .info-card {
-      flex: 1;
-      min-width: 250px;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .info-card h4 {
-      color: #4CAF50;
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 10px;
-      margin-bottom: 15px;
-    }
-    
-    .plugin-list {
-      list-style-type: none;
-      padding: 0;
-    }
-    
-    .plugin-list li {
-      margin-bottom: 10px;
-      padding-left: 20px;
-      position: relative;
-    }
-    
-    .plugin-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #4CAF50;
-    }
-    
-    /* Style for dialog */
-    .ui-dialog .ui-dialog-content img {
-      max-width: 100%;
-      max-height: 400px;
-      display: block;
-      margin: 0 auto;
-    }
-  </style>
-  
-  <script>
-    $(document).ready(function(){
-    
-      $('.carousel-container').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
-          }
-        ]
-      });
-      
-      
-      $(".carousel-item img").on("click", function(){
-        var imgSrc = $(this).attr("src");
-        var imgAlt = $(this).attr("alt");
-        var img = $("<img>").attr("src", imgSrc).css({
-          "width": "auto",
-          "height": "auto",
-          "max-width": "100%",
-          "max-height": "400px"
-        });
-        $("<div>").append(img).dialog({
-          modal: true,
-          title: imgAlt,
-          width: 500, 
-          close: function(){
-            $(this).dialog("destroy").remove();
-          }
-        });
-      });
-      
-     
-      $(".tech-card").hide();
-      
-      $(".tech-toggle").on("click", function() {
-        var targetId = $(this).data("target");
-        $("#" + targetId).slideToggle(500);
-        
-        // Change arrow direction
-        var arrow = $(this).find(".toggle-arrow");
-        if (arrow.html() === "▼") {
-          arrow.html("▲");
-        } else {
-          arrow.html("▼");
-        }
-      });
-      
-   
-      $("#html-tech").slideDown();
-    });
-  </script>
 </head>
 <body>
   <header>
@@ -244,15 +56,15 @@
       <h3>Project Gallery</h3>
       <div class="carousel-container">
         <div class="carousel-item">
-          <img src="../image/js_image.png" alt="JavaScript Technologies">
+          <img src="../images/js_image.png" alt="JavaScript Technologies">
           <div class="carousel-caption">JavaScript Technologies</div>
         </div>
         <div class="carousel-item">
-          <img src="../image/html_image.png" alt="HTML Technologies">
+          <img src="../images/html_image.png" alt="HTML Technologies">
           <div class="carousel-caption">HTML Technologies</div>
         </div>
         <div class="carousel-item">
-          <img src="../image/css_image.png" alt="CSS Technologies">
+          <img src="../images/css_image.png" alt="CSS Technologies">
           <div class="carousel-caption">CSS Technologies</div>
         </div>
       </div>
@@ -282,6 +94,10 @@
             <p>The interactive features are powered by JavaScript and jQuery. We use modern ES6+ features and jQuery plugins to create a smooth user experience.</p>
           </div>
         </div>
+        <div id="api-user-list">
+          <h3>Loading example users...</h3>
+        </div>
+        
       </div>
       
       <h3>jQuery Plugins and Widgets</h3>

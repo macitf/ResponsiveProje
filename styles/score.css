@@ -114,4 +114,116 @@ body {
   .btn:hover {
     background-color: #45a049;
   }
+    .btn-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .btn:hover {
+      background-color: #45a049;
+    }
+    
+    #logout-btn {
+      background-color: #f44336;
+    }
+    
+    #logout-btn:hover {
+      background-color: #da190b;
+    }
+    
+
+    .dataTables_wrapper {
+      padding: 20px 0;
+    }
+    
+    .dataTables_filter input {
+      padding: 5px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    
+    .dataTables_length select {
+      padding: 5px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    
+    .dataTables_info, .dataTables_paginate {
+      margin-top: 15px;
+    }
+    
+    .paginate_button {
+      padding: 5px 10px;
+      margin: 0 2px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .paginate_button.current {
+      background-color: #4CAF50;
+      color: white;
+    }
+    
+   
+    .stats-card {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-around;
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+    
+    .stat-label {
+      font-size: 14px;
+      color: #666;
+      margin-top: 5px;
+    }
+    
+    /* Skor filtre seçenekleri */
+    .filter-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 15px 0;
+    }
+    
+    .filter-btn {
+      padding: 8px 15px;
+      background-color: #eee;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    .filter-btn.active {
+      background-color: #4CAF50;
+      color: white;
+      border-color: #4CAF50;
+    }
   
